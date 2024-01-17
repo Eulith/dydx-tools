@@ -11,3 +11,11 @@ It also provides some nice tooling for getting in and out of compatible assets f
 You need to edit the values in `credentials.py` to use this library.
 
 If you have questions, reach out to engineers@eulith.com.
+
+To create and fund a new DyDx account, you must do the following:
+
+1. Create User (`python manage.py create-user --network-id 1`)
+2. Register User (`python manage.py register-user --network-id 1`)
+3. Make sure you have some USDC (`python manage.py eth-to-usdc --amount 0.01 --network-id 1`)
+4. Approve the DyDx exchange contract to take your USDC (`python manage.py approve-dydx-exchange --amount 25 --network-id 1`)
+5. Deposit USDC to the exchange contract (`python manage.py deposit-dydx --amount 25 --network-id 1`)
